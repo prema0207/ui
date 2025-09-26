@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +11,9 @@ body {
   color: #111;
 }
 
-/* App container */
+/* APP CONTAINER */
 .app {
-  max-width: 430px;     /* Mobile look */
+  max-width: 430px;     /* Mobile screen look */
   margin: 0 auto;
   border: 1px solid #ddd;
   background: #fff;
@@ -27,8 +27,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 12px;
+  padding: 10px 15px;
   border-bottom: 1px solid #ddd;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .top-bar .logo img {
@@ -37,13 +41,19 @@ body {
 
 .top-icons {
   display: flex;
-  gap: 15px;
+  gap: 18px;
+  align-items: center;
 }
 
 .icon {
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.icon:hover {
+  opacity: 0.6;
 }
 
 /* STORIES */
@@ -53,6 +63,7 @@ body {
   padding: 10px;
   overflow-x: auto;
   border-bottom: 1px solid #ddd;
+  background: #fff;
 }
 
 .stories::-webkit-scrollbar {
@@ -69,7 +80,7 @@ body {
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #e1306c;
+  border: 2px solid #e1306c; /* Insta red/pink */
   padding: 2px;
 }
 
@@ -77,15 +88,17 @@ body {
   font-size: 12px;
   margin-top: 4px;
   color: #333;
+  white-space: nowrap;
 }
 
-/* Suggested user */
+/* SUGGESTED USER */
 .suggested {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 12px;
   border-bottom: 1px solid #eee;
+  background: #fff;
 }
 
 .sug-left {
@@ -120,19 +133,19 @@ body {
   background: none;
   border: none;
   color: #0095f6;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 14px;
   cursor: pointer;
 }
 
-/* Post */
+/* POST */
 .post img {
   width: 100%;
-  height: auto;
   display: block;
+  object-fit: cover;
 }
 
-/* Bottom Nav */
+/* BOTTOM NAV */
 .bottom-nav {
   display: flex;
   justify-content: space-around;
@@ -142,4 +155,23 @@ body {
   position: sticky;
   bottom: 0;
   background: #fff;
+  z-index: 100;
+}
+
+.bottom-nav .icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.bottom-nav .icon:hover {
+  opacity: 0.6;
+}
+
+.nav-item img {
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  object-fit: cover;
 }
